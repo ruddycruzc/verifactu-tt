@@ -12,8 +12,9 @@
 .solution-section__header h2 {
   margin: 0;
   color: var(--color-white);
-  font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-verifactu-title);
+  font-weight: var(--font-weight-black);
+  line-height: 0.9;
 }
 
 .solution-section__header span {
@@ -48,7 +49,7 @@
 
 .solution-section__item:nth-child(2) {
   grid-column: 8 / span 5;
-  margin-top: clamp(4rem, 8vw, 7rem);
+  margin-top: clamp(1rem, 3vw, 2.5rem);
 }
 
 .solution-section__item:nth-child(3) {

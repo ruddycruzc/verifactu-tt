@@ -1,0 +1,18 @@
+<nav class="navbar" aria-label="Navegación principal">
+  <a href="#inicio" class="navbar__logo" (click)="closeMenu()">VERIFACTU</a>
+
+  <ul class="navbar__menu" [class.navbar__menu--open]="menuOpen">
+    @for (item of navigationItems; track item.target) {
+      <li>
+        <a [href]="'#' + item.target" (click)="closeMenu()">
+          {{ item.label }}
+        </a>
+      </li>
+    }
+  </ul>
+
+  <button class="navbar__hamburger" type="button" aria-label="Abrir menu" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+  </button>
+</nav>

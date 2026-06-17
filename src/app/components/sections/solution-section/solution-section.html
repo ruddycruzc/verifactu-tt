@@ -1,4 +1,4 @@
-<section class="solution-section" appScrollReveal>
+<section id="facturacion" class="solution-section">
 
   <div class="solution-section__header">
 
@@ -28,6 +28,9 @@
 
       <div
         class="solution-section__item tt-card-reveal"
+        appScrollReveal
+        [scrollRevealRootMargin]="'0px 0px -10% 0px'"
+        [scrollRevealThreshold]="0.12"
         [style.--reveal-index]="index">
         <app-project-card
           [image]="feature.media"

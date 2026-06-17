@@ -27,6 +27,9 @@
 .project-cards-carousel__intro h2 {
   margin: 0;
   color: var(--text-heading-color);
+  font-size: var(--font-size-verifactu-title);
+  font-weight: var(--font-weight-black);
+  line-height: 0.9;
 }
 
 .project-cards-carousel__intro span {

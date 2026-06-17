@@ -28,8 +28,8 @@
 .contact-title {
   margin: 0;
   color: var(--text-heading-color);
-  font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-verifactu-title-md);
+  font-weight: var(--font-weight-black);
   line-height: var(--text-heading-line-height);
   letter-spacing: 0;
 }

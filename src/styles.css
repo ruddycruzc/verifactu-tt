@@ -4,6 +4,7 @@
 @import './app/styles/tokens/radius.css';
 @import './app/styles/tokens/typography.css';
 @import './app/styles/design-system.css';
+@import './app/styles/animations.css';
 
 @import './app/styles/globals/base.css';
 @import 'tailwindcss';

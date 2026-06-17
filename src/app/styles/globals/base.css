@@ -9,10 +9,18 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family-base);
 
   background: var(--color-background);
 
   color: var(--color-text-primary);
+}
+
+section[id] {
+  scroll-margin-top: 7rem;
 }
