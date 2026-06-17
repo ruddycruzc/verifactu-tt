@@ -1,1 +1,31 @@
-<p>solution-card works!</p>
+<article class="solution-card">
+
+  <div class="solution-card__media">
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline>
+
+      <source
+        [src]="feature.media"
+        type="video/mp4">
+
+    </video>
+
+  </div>
+
+  <div class="solution-card__content">
+
+    <h3>
+      {{ feature.title }}
+    </h3>
+
+    <p>
+      {{ feature.description }}
+    </p>
+
+  </div>
+
+</article>

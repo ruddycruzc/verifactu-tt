@@ -1,1 +1,36 @@
-<p>solution-section works!</p>
+<section class="solution-section">
+
+  <div class="solution-section__header">
+
+    <h2>
+
+      HERRAMIENTA DE
+
+      <span>
+        FACTURACIÓN
+      </span>
+
+    </h2>
+
+    <p>
+      [ ADAPTADA TÁCTICA TIC ]
+    </p>
+
+  </div>
+
+  <div class="solution-section__grid">
+
+    @for (
+      feature of features;
+      track feature.title
+    ) {
+
+      <app-solution-card
+        [feature]="feature">
+      </app-solution-card>
+
+    }
+
+  </div>
+
+</section>

@@ -1,0 +1,50 @@
+.solution-section {
+
+  padding:
+    var(--space-2xl)
+    var(--space-lg);
+}
+
+.solution-section__header {
+
+  text-align: center;
+
+  margin-bottom: var(--space-xl);
+}
+
+.solution-section__header h2 {
+
+  font-size: 3rem;
+
+  font-weight: 800;
+}
+
+.solution-section__header span {
+
+  color: var(--color-primary);
+}
+
+.solution-section__header p {
+
+  margin-top: 0.5rem;
+
+  color: var(--color-primary);
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.solution-section__grid {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: var(--space-xl);
+}
