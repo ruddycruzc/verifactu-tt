@@ -6,6 +6,7 @@ import { BenefitsSection } from '../../components/sections/benefits-section/bene
 import { SolutionSection } from '../../components/sections/solution-section/solution-section';
 import { ContactSection } from '../../components/sections/contact-section/contact-section';
 import { Navbar } from '../../components/layout/navbar/navbar';
+import { Footer } from "../../components/layout/footer/footer";
 
 @Component({
   selector: 'app-home',
@@ -16,9 +17,9 @@ import { Navbar } from '../../components/layout/navbar/navbar';
     AboutVerifactuSection,
     BenefitsSection,
     SolutionSection,
-    ContactSection
-   
-  ],
+    ContactSection,
+    Footer
+],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
