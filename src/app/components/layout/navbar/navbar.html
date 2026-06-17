@@ -1,0 +1,41 @@
+<header class="navbar">
+
+  <div class="navbar__container">
+
+    <a
+      href="#hero"
+      class="navbar__logo">
+
+      VERIFACTU
+
+    </a>
+
+    <nav class="navbar__nav">
+
+      <ul class="navbar__list">
+
+        @for (
+          item of navigationItems;
+          track item.fragment
+        ) {
+
+          <li>
+
+            <a
+              [href]="'#' + item.fragment">
+
+              {{ item.label }}
+
+            </a>
+
+          </li>
+
+        }
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
