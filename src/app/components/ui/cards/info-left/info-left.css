@@ -1,67 +1,62 @@
-.about-verifactu-section {
-  background: var(--color-bkg-light);
-}
-
-.about-verifactu-section__container {
+.info-left {
   display: grid;
   grid-template-columns: minmax(18rem, 0.86fr) minmax(32rem, 1.45fr);
   gap: clamp(3rem, 7vw, 7rem);
   align-items: center;
-  padding: clamp(2rem, 4vw, 3rem);
+  padding: 3rem;
   border-radius: var(--radius-panel);
   background: var(--info-left-background);
 }
 
-.about-verifactu-section__title {
-  max-width: 34rem;
+.info-left__content h2 {
+  max-width: 31rem;
   margin: 0;
   color: var(--info-left-text-color);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-extrabold);
 }
 
-.about-verifactu-section__title span {
-  color: var(--color-primary);
-}
-
-.about-verifactu-section__description {
+.info-left__content p {
   max-width: 36rem;
-  margin: var(--title-subtitle-spacing) 0 clamp(1.75rem, 3vw, 2.25rem);
+  margin: 1rem 0 0;
   color: var(--info-left-body-color);
   font-size: var(--font-size-body-large);
   line-height: var(--text-body-line-height);
 }
 
-.about-verifactu-section__gallery {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--grid-gap);
+.info-left__content app-button {
+  margin-top: 2.25rem;
 }
 
-.about-verifactu-section__gallery img {
+.info-left__visuals {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.info-left__visuals img {
   width: 100%;
   height: 100%;
-  min-height: clamp(21rem, 32vw, 29.25rem);
+  min-height: 29.25rem;
   object-fit: cover;
   border-radius: var(--radius-cards);
 }
 
 @media (max-width: 1100px) {
-  .about-verifactu-section__container {
+  .info-left {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 760px) {
-  .about-verifactu-section__container {
+  .info-left {
     padding: 2rem var(--section-padding-x);
   }
 
-  .about-verifactu-section__gallery {
+  .info-left__visuals {
     grid-template-columns: 1fr;
   }
 
-  .about-verifactu-section__gallery img {
-    min-height: 18rem;
+  .info-left__visuals img {
+    min-height: 21rem;
   }
 }

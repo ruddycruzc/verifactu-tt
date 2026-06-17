@@ -4,38 +4,74 @@
   align-items: center;
   justify-content: center;
 
-  padding: 1rem 2rem;
+  min-height: var(--button-height);
+  padding: 0 var(--button-padding);
 
-  border-radius: var(--radius-pill);
+  border-radius: var(--button-radius);
 
   cursor: pointer;
 
-  transition: 0.2s ease;
+  font-family: var(--font-family-base);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+
+  transition: var(--transition-base);
 }
 
 .app-button__content {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--button-gap);
 }
 
 :host(.app-button--primary) {
-  background: var(--color-primary);
+  background: var(--button-primary-bg);
 
-  color: white;
+  color: var(--button-text-inverse);
 
-  border: 2px solid var(--color-primary);
+  border: var(--button-border-width) solid var(--button-primary-bg);
 }
 
 :host(.app-button--secondary) {
+  background: var(--button-secondary-bg);
+
+  color: var(--button-text);
+
+  border: var(--button-border-width) solid var(--button-primary-bg);
+}
+
+:host(.app-button--tertiary) {
+  min-height: auto;
+  padding: 0;
   background: transparent;
-
-  color: var(--color-primary);
-
-  border: 2px solid var(--color-primary);
+  color: var(--button-tertiary-color);
+  border: 0;
 }
 
 :host(.app-button--primary:hover),
 :host(.app-button--secondary:hover) {
   transform: translateY(-2px);
+}
+
+:host(.app-button--primary:hover) {
+  background: var(--button-primary-bg-hover);
+  border-color: var(--button-primary-bg-hover);
+}
+
+:host(.app-button--secondary:hover) {
+  background: var(--button-secondary-bg-hover);
+}
+
+:host(.app-button--tertiary:hover) {
+  color: var(--button-tertiary-color-hover);
+}
+
+:host(.app-button--icon-only) {
+  width: var(--button-height);
+  padding: 0;
+}
+
+:host(.app-button--full) {
+  width: 100%;
 }

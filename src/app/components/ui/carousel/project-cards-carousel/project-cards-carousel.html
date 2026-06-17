@@ -1,0 +1,40 @@
+<div class="project-cards-carousel">
+  <div class="project-cards-carousel__header">
+    <div class="project-cards-carousel__intro">
+      <h2>{{ title }}</h2>
+
+      @if (eyebrow) {
+        <span>{{ eyebrow }}</span>
+      }
+    </div>
+
+    <div class="project-cards-carousel__controls" aria-label="Controles del carrusel">
+      <app-button variant="primary" iconOnly ariaLabel="Anterior" (buttonClick)="prev()">←</app-button>
+      <app-button variant="primary" iconOnly ariaLabel="Siguiente" (buttonClick)="next()">→</app-button>
+    </div>
+  </div>
+
+  <div
+    #viewport
+    class="project-cards-carousel__viewport"
+    (pointerdown)="startDrag($event)"
+    (pointermove)="drag($event)"
+    (pointerup)="endDrag($event)"
+    (pointercancel)="endDrag($event)"
+    (pointerleave)="endDrag($event)">
+    <div class="project-cards-carousel__track">
+      @for (card of cards; track card.title) {
+        <div class="project-cards-carousel__slide">
+          <app-project-card
+            [image]="card.image"
+            [mediaType]="card.mediaType || 'image'"
+            [imageAlt]="card.imageAlt || card.title"
+            [title]="card.title"
+            [description]="card.description"
+            [showButton]="showCardButton">
+          </app-project-card>
+        </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<article class="project-card">
+  <div class="project-card__media">
+    @if (mediaType === 'video') {
+      <video [attr.aria-label]="imageAlt || title" autoplay muted loop playsinline>
+        <source [src]="image" type="video/mp4">
+      </video>
+    } @else {
+      <img [src]="image" [alt]="imageAlt || title" loading="lazy" decoding="async">
+    }
+  </div>
+
+  <h3>{{ title }}</h3>
+  <p>{{ description }}</p>
+
+  @if (showButton) {
+    @if (buttonHref) {
+      <app-button variant="tertiary" [href]="buttonHref" [target]="buttonTarget" rel="noopener noreferrer">
+        {{ buttonLabel }}
+        <span class="arrow" aria-hidden="true">→</span>
+      </app-button>
+    } @else {
+      <app-button variant="tertiary" [routerLink]="buttonRouterLink">
+        {{ buttonLabel }}
+        <span class="arrow" aria-hidden="true">→</span>
+      </app-button>
+    }
+  }
+</article>

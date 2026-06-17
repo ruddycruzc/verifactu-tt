@@ -1,0 +1,24 @@
+<article
+  class="background-color-info-card"
+  [class.background-color-info-card--large]="variant === 'large'"
+  [class.background-color-info-card--dark]="tone === 'dark'">
+  <div>
+    <h3>
+      @if (emphasis && title.includes(emphasis)) {
+        <span>{{ titlePrefix }}</span><strong>{{ emphasis }}</strong><span>{{ titleSuffix }}</span>
+      } @else {
+        {{ title }}
+      }
+    </h3>
+    @if (description) {
+      <p>{{ description }}</p>
+    }
+  </div>
+
+  @if (buttonLabel) {
+    <app-button variant="tertiary" [routerLink]="buttonLink">
+      {{ buttonLabel }}
+      <span class="arrow">→</span>
+    </app-button>
+  }
+</article>
