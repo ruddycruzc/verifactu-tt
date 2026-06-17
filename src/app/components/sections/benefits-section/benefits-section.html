@@ -1,1 +1,30 @@
-<p>benefits-section works!</p>
+<section class="benefits-section">
+
+  <div class="benefits-section__header">
+
+    <h2>
+      HERRAMIENTA AEAT
+    </h2>
+
+    <span>
+      [ NUESTRO PROCESO ]
+    </span>
+
+  </div>
+
+  <div class="benefits-section__grid">
+
+    @for (
+      benefit of benefits;
+      track benefit.title
+    ) {
+
+      <app-benefit-card
+        [benefit]="benefit">
+      </app-benefit-card>
+
+    }
+
+  </div>
+
+</section>
