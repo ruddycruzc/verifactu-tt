@@ -2,12 +2,12 @@
   <div class="contact-content">
     <div class="contact-info">
       <h2 class="contact-title">
-        {{ titleLineOne }}
+        {{ content.titleLineOne }}
         <br>
-        <span>{{ titleHighlight }}</span>
+        <span>{{ content.titleHighlight }}</span>
       </h2>
 
-      <p class="contact-text">{{ description }}</p>
+      <p class="contact-text">{{ content.description }}</p>
 
       <div class="info-blocks">
         <div class="info-item">
@@ -19,7 +19,7 @@
           </div>
           <div class="info-text">
             <strong>Email</strong>
-            <span>{{ email }}</span>
+            <span>{{ content.email }}</span>
           </div>
         </div>
 
@@ -32,7 +32,7 @@
           </div>
           <div class="info-text">
             <strong>Oficinas</strong>
-            <span>{{ office }}</span>
+            <span>{{ content.office }}</span>
           </div>
         </div>
       </div>
@@ -62,7 +62,9 @@
           <textarea placeholder="Mensaje" rows="5"></textarea>
         </div>
 
-        <button class="contact-submit" type="submit">Enviar</button>
+        <app-button variant="primary" type="submit" fullWidth>
+          Enviar
+        </app-button>
       </form>
     </div>
   </div>

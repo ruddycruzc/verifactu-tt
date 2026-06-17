@@ -40,7 +40,7 @@ export class HeroSection implements OnInit, OnDestroy {
     let delay = this.isDeleting ? 50 : 100;
 
     if (!this.isDeleting && this.charIndex === this.typingText.length) {
-      delay = 2000;
+      delay = 7000;
       this.isDeleting = true;
     } else if (this.isDeleting && this.charIndex === 0) {
       delay = 500;

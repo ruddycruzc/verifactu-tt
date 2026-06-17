@@ -155,22 +155,9 @@
   box-shadow: var(--shadow-focus);
 }
 
-.contact-submit {
+.contact-form app-button {
+  width: 100%;
   min-height: var(--button-height);
-  border: var(--button-border-width) solid var(--button-primary-bg);
-  border-radius: var(--button-radius);
-  background: var(--button-primary-bg);
-  color: var(--button-text-inverse);
-  cursor: pointer;
-  font: inherit;
-  font-weight: var(--button-font-weight);
-  transition: var(--transition-base);
-}
-
-.contact-submit:hover {
-  background: var(--button-primary-bg-hover);
-  border-color: var(--button-primary-bg-hover);
-  transform: translateY(-2px);
 }
 
 @media (max-width: 968px) {

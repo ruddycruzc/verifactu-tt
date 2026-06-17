@@ -4,20 +4,20 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  padding: 0 2.5rem 0 0;
+  padding: 0 var(--section-padding-x);
   overflow: hidden;
   background: var(--color-bkg-white);
   scroll-margin-top: 7rem;
 }
 
 .hero-section__container {
-  max-width: 87.5rem;
+  max-width: var(--page-max-width);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-inline: auto;
-  padding-right: 3.75rem;
+  padding-right: 0;
 }
 
 .hero-section__image-box {
@@ -34,7 +34,6 @@
   max-width: none;
   object-fit: contain;
   display: block;
-  transform: translateX(-5.625rem);
   animation: slideRight 720ms ease both;
 }
 
@@ -44,8 +43,8 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  margin-left: -5.625rem;
-  padding-right: 2.5rem;
+  padding-right: 20rem;
+  margin-right: 10 rem;
   animation: slideLeft 720ms ease both;
 }
 
@@ -119,6 +118,7 @@
   .hero-section__text-box {
     align-items: center;
     text-align: center;
+    margin-left: 0;
     padding: 0;
   }
 
