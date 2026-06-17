@@ -1,0 +1,73 @@
+.contact-section {
+
+  padding:
+    var(--space-2xl)
+    var(--space-lg);
+}
+
+.contact-section__container {
+
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.contact-section__header {
+
+  text-align: center;
+
+  margin-bottom: var(--space-xl);
+}
+
+.contact-section__header h2 {
+
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  margin-bottom: 1rem;
+}
+
+.contact-section__header p {
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  line-height: 1.7;
+}
+
+.contact-section__form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--space-lg);
+}
+
+.contact-section__field {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.5rem;
+}
+
+.contact-section__field input,
+.contact-section__field textarea {
+
+  padding: 1rem;
+
+  border: 1px solid #ddd;
+
+  border-radius: var(--radius-md);
+
+  font: inherit;
+}
+
+.contact-section__field textarea {
+
+  resize: vertical;
+}

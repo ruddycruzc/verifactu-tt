@@ -1,1 +1,73 @@
-<p>contact-section works!</p>
+<section class="contact-section">
+
+  <div class="contact-section__container">
+
+    <div class="contact-section__header">
+
+      <h2>
+
+        {{ content.title }}
+
+      </h2>
+
+      <p>
+
+        {{ content.description }}
+
+      </p>
+
+    </div>
+
+    <form class="contact-section__form">
+
+      <div class="contact-section__field">
+
+        <label for="name">
+          Nombre completo
+        </label>
+
+        <input
+          id="name"
+          type="text"
+          placeholder="Tu nombre...">
+
+      </div>
+
+      <div class="contact-section__field">
+
+        <label for="email">
+          Correo electrónico
+        </label>
+
+        <input
+          id="email"
+          type="email"
+          placeholder="correo@empresa.com">
+
+      </div>
+
+      <div class="contact-section__field">
+
+        <label for="message">
+          ¿En qué podemos ayudarte?
+        </label>
+
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="Escribe tu mensaje aquí...">
+        </textarea>
+
+      </div>
+
+      <app-button type="submit">
+
+        {{ content.submitButton }}
+
+      </app-button>
+
+    </form>
+
+  </div>
+
+</section>
