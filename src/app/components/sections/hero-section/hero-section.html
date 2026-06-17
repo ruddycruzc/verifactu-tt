@@ -1,0 +1,43 @@
+<section class="hero-section">
+
+  <div class="hero-section__container">
+
+    <div class="hero-section__image">
+
+      <img
+        [src]="hero.image"
+        [alt]="hero.title">
+
+    </div>
+
+    <div class="hero-section__content">
+
+      <h1>
+        {{ hero.title }}
+      </h1>
+
+      <p>
+        {{ hero.subtitle }}
+      </p>
+
+      <span class="hero-section__highlight">
+        {{ hero.highlightedWords[0] }}
+      </span>
+
+      <div class="hero-section__actions">
+
+        <button>
+          {{ hero.primaryButton }}
+        </button>
+
+        <button>
+          {{ hero.secondaryButton }}
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

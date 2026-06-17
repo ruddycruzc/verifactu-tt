@@ -1,4 +1,7 @@
-export const HERO_CONTENT = {
+import { HeroContent }
+from '../../interfaces/data/hero-content.interface';
+
+export const HERO_CONTENT: HeroContent =  {
   title: 'VERIFACTU',
 
   subtitle: 'APOSTANDO POR LA',
@@ -9,5 +12,11 @@ export const HERO_CONTENT = {
     'INNOVACIÓN'
   ],
 
-  image: '/assets/images/hero/verifactu-hero.png'
+image: '/images/hero/verifactu-hero.png',
+
+  primaryButton:
+    'Solicitar información',
+
+  secondaryButton:
+    'Ver funcionalidades'
 };

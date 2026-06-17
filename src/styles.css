@@ -1,3 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/styles/tokens/colors.css';
+@import './app/styles/tokens/spacing.css';
+@import './app/styles/tokens/radius.css';
+@import './app/styles/tokens/typography.css';
 
+@import './app/styles/globals/base.css';
 @import 'tailwindcss';

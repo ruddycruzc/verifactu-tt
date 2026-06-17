@@ -1,0 +1,47 @@
+.hero-section {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding:
+    var(--space-xl)
+    var(--space-lg);
+}
+
+.hero-section__container {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: var(--space-xl);
+
+  align-items: center;
+}
+
+.hero-section__image img {
+  width: 100%;
+
+  display: block;
+}
+
+.hero-section__content h1 {
+  font-size: var(--font-size-h1);
+}
+
+.hero-section__highlight {
+  color: var(--color-primary);
+
+  font-weight: 700;
+}
+
+.hero-section__actions {
+  display: flex;
+
+  gap: var(--space-md);
+
+  margin-top: var(--space-md);
+}
