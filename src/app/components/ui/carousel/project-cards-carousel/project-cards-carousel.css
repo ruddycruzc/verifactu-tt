@@ -21,6 +21,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  
   gap: var(--grid-gap);
   width: 100%;
 }
@@ -28,7 +29,7 @@
 .project-cards-carousel__intro h2 {
   margin: 0;
   color: var(--text-heading-color);
-  font-size: var(--verifactu-h1-size);
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-black);
   line-height: 0.9;
 }
@@ -47,6 +48,13 @@
   display: flex;
   flex: 0 0 auto;
   gap: 1rem;
+}
+
+.project-cards-carousel__controls app-button {
+  width: var(--button-height);
+  height: var(--button-height);
+  min-height: var(--button-height);
+  border-radius: var(--button-radius);
 }
 
 .project-cards-carousel__viewport {

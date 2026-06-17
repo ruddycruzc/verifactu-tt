@@ -5,26 +5,23 @@
 }
 
 .about-verifactu-info-block {
-  --video-reveal-progress: 0;
-  --about-media-scale: 0.68;
-
   display: grid;
   grid-template-columns: minmax(18rem, 0.86fr) minmax(32rem, 1.45fr);
   gap: clamp(3rem, 7vw, 7rem);
   align-items: center;
-  padding: clamp(2rem, 4vw, 3rem);
+  padding: 3rem;
   border-radius: var(--radius-panel);
   background: var(--info-left-background);
   box-sizing: border-box;
 }
 
 .about-verifactu-info-block__title {
-  max-width: 34rem;
+  max-width: 31rem;
   margin: 0;
   color: var(--info-left-text-color);
-  font-size: var(--verifactu-h2-size);
-  font-weight: var(--font-weight-black);
-  line-height: 0.95;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
 }
 
 .about-verifactu-info-block__title span {
@@ -33,29 +30,26 @@
 
 .about-verifactu-info-block__description {
   max-width: 36rem;
-  margin: var(--title-subtitle-spacing) 0 clamp(1.75rem, 3vw, 2.25rem);
+  margin: 1rem 0 0;
   color: var(--info-left-body-color);
   font-size: var(--font-size-body-large);
   line-height: var(--text-body-line-height);
 }
 
-.about-verifactu-info-block__media-wrapper {
-  perspective: 75rem;
+.about-verifactu-info-block__content app-button {
+  margin-top: 2.25rem;
 }
 
-.about-verifactu-info-block__gallery {
+.about-verifactu-info-block__visuals {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--grid-gap);
-  transform: scale(var(--about-media-scale));
-  transform-origin: center center;
-  will-change: transform;
+  gap: 1.5rem;
 }
 
-.about-verifactu-info-block__gallery img {
+.about-verifactu-info-block__visuals img {
   width: 100%;
   height: 100%;
-  min-height: clamp(21rem, 32vw, 29.25rem);
+  min-height: 29.25rem;
   object-fit: cover;
   border-radius: var(--radius-cards);
 }
@@ -71,18 +65,11 @@
     padding: 2rem var(--section-padding-x);
   }
 
-  .about-verifactu-info-block__gallery {
+  .about-verifactu-info-block__visuals {
     grid-template-columns: 1fr;
   }
 
-  .about-verifactu-info-block__gallery img {
-    min-height: 18rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .about-verifactu-info-block__gallery {
-    transform: none;
-    will-change: auto;
+  .about-verifactu-info-block__visuals img {
+    min-height: 21rem;
   }
 }

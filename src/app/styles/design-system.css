@@ -14,7 +14,7 @@
   --font-size-4xl: 2.5rem;
   --font-size-5xl: 3.5rem;
   --font-size-h1: clamp(4rem, 8vw, 6rem);
-  --font-size-h2: 2rem;
+  --font-size-h2: 4rem;
   --font-size-h3: 1.25rem;
   --verifactu-h1-size: var(--font-size-h1);
   --verifactu-h2-size: clamp(2.75rem, 6vw, 4.5rem);

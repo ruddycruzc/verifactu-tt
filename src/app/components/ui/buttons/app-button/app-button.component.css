@@ -49,10 +49,7 @@
   border: 0;
 }
 
-:host(.app-button--primary:hover),
-:host(.app-button--secondary:hover) {
-  transform: translateY(-2px);
-}
+
 
 :host(.app-button--primary:hover) {
   background: var(--button-primary-bg-hover);
