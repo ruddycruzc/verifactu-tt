@@ -1,0 +1,41 @@
+:host {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 2rem;
+
+  border-radius: var(--radius-pill);
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.app-button__content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+:host(.app-button--primary) {
+  background: var(--color-primary);
+
+  color: white;
+
+  border: 2px solid var(--color-primary);
+}
+
+:host(.app-button--secondary) {
+  background: transparent;
+
+  color: var(--color-primary);
+
+  border: 2px solid var(--color-primary);
+}
+
+:host(.app-button--primary:hover),
+:host(.app-button--secondary:hover) {
+  transform: translateY(-2px);
+}

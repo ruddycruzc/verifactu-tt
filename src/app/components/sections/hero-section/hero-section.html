@@ -3,38 +3,42 @@
   <div class="hero-section__container">
 
     <div class="hero-section__image">
-
       <img
         [src]="hero.image"
         [alt]="hero.title">
-
     </div>
 
     <div class="hero-section__content">
 
-      <h1>
+      <h1 class="hero-section__title">
         {{ hero.title }}
       </h1>
 
-      <p>
+      <p class="hero-section__subtitle">
+
         {{ hero.subtitle }}
+
+        <span class="hero-section__highlight">
+          {{ currentWord }}
+        </span>
+
       </p>
 
-      <span class="hero-section__highlight">
-        {{ hero.highlightedWords[0] }}
-      </span>
+<div class="hero-section__actions">
 
-      <div class="hero-section__actions">
+  <app-button>
 
-        <button>
-          {{ hero.primaryButton }}
-        </button>
+    {{ hero.primaryButton }}
 
-        <button>
-          {{ hero.secondaryButton }}
-        </button>
+  </app-button>
 
-      </div>
+  <app-button variant="secondary">
+
+    {{ hero.secondaryButton }}
+
+  </app-button>
+
+</div>
 
     </div>
 
