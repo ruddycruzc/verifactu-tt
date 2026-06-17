@@ -11,8 +11,9 @@
   justify-content: space-between;
   gap: var(--grid-gap);
   width: min(100%, var(--page-max-width));
-  margin: 0 auto;
+  margin: 0;
   padding-inline: var(--section-padding-x);
+  padding-right: 0;
   box-sizing: border-box;
 }
 
@@ -27,7 +28,7 @@
 .project-cards-carousel__intro h2 {
   margin: 0;
   color: var(--text-heading-color);
-  font-size: var(--font-size-verifactu-title);
+  font-size: var(--verifactu-h1-size);
   font-weight: var(--font-weight-black);
   line-height: 0.9;
 }
@@ -56,6 +57,8 @@
   padding-top: clamp(2rem, 4vw, 3.5rem);
   padding-left: var(--section-padding-x);
   padding-right: var(--section-padding-x);
+  margin-left: var(--section-padding-x);
+  margin-right: calc(-1 * var(--section-padding-x));
   box-sizing: border-box;
   cursor: grab;
   touch-action: pan-x;
@@ -76,6 +79,7 @@
   gap: var(--cards-gap);
   width: max-content;
   padding-right: var(--section-padding-x);
+  padding-left: var(--section-padding-x);
 }
 
 .project-cards-carousel__slide {

@@ -16,14 +16,16 @@
   --font-size-h1: clamp(4rem, 8vw, 6rem);
   --font-size-h2: 2rem;
   --font-size-h3: 1.25rem;
+  --verifactu-h1-size: var(--font-size-h1);
+  --verifactu-h2-size: clamp(2.75rem, 6vw, 4.5rem);
   --font-size-hero: var(--font-size-h1);
   --font-size-hero-description: clamp(1.1rem, 1.55vw, 1.5rem);
   --font-size-card-title: clamp(1.35rem, 1.55vw, 1.5rem);
   --font-size-card-description: clamp(1.05rem, 1.3vw, 1.25rem);
   --font-size-body-large: clamp(1.05rem, 1.3vw, 1.25rem);
   --font-size-body-medium: clamp(1rem, 1.15vw, 1.15rem);
-  --font-size-verifactu-title: clamp(3.5rem, 7vw, 5.75rem);
-  --font-size-verifactu-title-md: clamp(2.75rem, 6vw, 4.5rem);
+  --font-size-verifactu-title: var(--verifactu-h1-size);
+  --font-size-verifactu-title-md: var(--verifactu-h2-size);
 
   --line-height-tight: 1.04;
   --line-height-heading: 1.15;
@@ -202,11 +204,11 @@ h6 {
 }
 
 h1 {
-  font-size: var(--font-size-h1);
+  font-size: var(--verifactu-h1-size);
 }
 
 h2 {
-  font-size: var(--font-size-h2);
+  font-size: var(--verifactu-h2-size);
 }
 
 @media (max-width: 1024px) {

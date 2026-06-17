@@ -1,0 +1,29 @@
+<div
+  class="about-verifactu-info-block"
+  [style.--video-reveal-progress]="scrollProgress"
+  [style.--about-media-scale]="mediaScale">
+  <div class="about-verifactu-info-block__content">
+    <h2 class="about-verifactu-info-block__title">
+      {{ content.title }}
+
+      <span>
+        {{ content.highlightedWord }}
+      </span>
+    </h2>
+
+    <p class="about-verifactu-info-block__description">
+      {{ content.description }}
+    </p>
+
+    <app-button>
+      {{ content.buttonLabel }}
+    </app-button>
+  </div>
+
+  <div class="about-verifactu-info-block__media-wrapper">
+    <div class="about-verifactu-info-block__gallery" aria-label="Imágenes de VERIFACTU">
+    <img [src]="content.imageOne" [alt]="content.highlightedWord">
+    <img [src]="content.imageTwo" [alt]="content.highlightedWord">
+    </div>
+  </div>
+</div>

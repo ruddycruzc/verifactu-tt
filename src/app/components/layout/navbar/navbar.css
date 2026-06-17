@@ -93,7 +93,6 @@
 
 .navbar__hamburger {
   display: none;
-  justify-self: end;
   width: 2.75rem;
   height: 2.75rem;
   padding: 0;
@@ -101,6 +100,41 @@
   border-radius: var(--button-radius);
   background: transparent;
   cursor: pointer;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: end;
+  gap: 1rem;
+}
+
+.navbar__icon-button,
+.navbar__language {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--button-height-sm);
+  height: var(--button-height-sm);
+  padding: 0;
+  border: 0;
+  border-radius: var(--button-radius);
+  background: transparent;
+  color: var(--button-tertiary-color);
+  cursor: default;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.navbar__icon-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
 }
 
 .navbar__hamburger span {
@@ -146,7 +180,9 @@
   }
 
   .navbar__hamburger {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -155,6 +191,10 @@
     width: min(calc(100% - 1.5rem), var(--page-max-width));
     min-height: 4rem;
     padding-inline: 1.125rem;
+  }
+
+  .navbar__actions {
+    gap: 0.5rem;
   }
 }
 

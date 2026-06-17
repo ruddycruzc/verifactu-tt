@@ -28,7 +28,7 @@
 .contact-title {
   margin: 0;
   color: var(--text-heading-color);
-  font-size: var(--font-size-verifactu-title-md);
+  font-size: var(--verifactu-h2-size);
   font-weight: var(--font-weight-black);
   line-height: var(--text-heading-line-height);
   letter-spacing: 0;
