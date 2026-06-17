@@ -1,1 +1,45 @@
-<p>about-verifactu-section works!</p>
+<section class="about-verifactu-section">
+
+  <div class="about-verifactu-section__container">
+
+    <div class="about-verifactu-section__content">
+
+      <h2 class="about-verifactu-section__title">
+
+        {{ content.title }}
+
+        <span>
+          {{ content.highlightedWord }}
+        </span>
+
+      </h2>
+
+      <p class="about-verifactu-section__description">
+
+        {{ content.description }}
+
+      </p>
+
+      <app-button>
+
+        {{ content.buttonLabel }}
+
+      </app-button>
+
+    </div>
+
+    <div class="about-verifactu-section__gallery">
+
+      <img
+        [src]="content.imageOne"
+        [alt]="content.highlightedWord">
+
+      <img
+        [src]="content.imageTwo"
+        [alt]="content.highlightedWord">
+
+    </div>
+
+  </div>
+
+</section>
