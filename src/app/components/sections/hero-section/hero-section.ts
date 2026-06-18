@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 
 import { HERO_CONTENT } from '../../../data/verifactu/hero.data';
 import { HeroContentComponent } from '../../ui/hero/hero-content/hero-content';
@@ -14,7 +14,7 @@ import { HeroImage } from '../../ui/hero/hero-image/hero-image';
 export class HeroSection implements OnInit, OnDestroy {
 
   readonly hero = HERO_CONTENT;
-  currentWord = '';
+  readonly currentWord = signal('');
 
   private wordIndex = 0;
   private charIndex = 0;
@@ -37,13 +37,13 @@ export class HeroSection implements OnInit, OnDestroy {
       : ['DIGITALIZACIÓN'];
     const word = words[this.wordIndex % words.length];
 
-    this.currentWord = this.isDeleting
+    this.currentWord.set(this.isDeleting
       ? word.substring(0, this.charIndex - 1)
-      : word.substring(0, this.charIndex + 1);
+      : word.substring(0, this.charIndex + 1));
 
     this.charIndex += this.isDeleting ? -1 : 1;
 
-    let delay = this.isDeleting ? 70 : 130;
+    let delay = this.isDeleting ? 60 : 115;
 
     if (!this.isDeleting && this.charIndex === word.length) {
       delay = 2200;
