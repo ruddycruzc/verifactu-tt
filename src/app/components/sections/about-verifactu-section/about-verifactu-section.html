@@ -1,3 +1,12 @@
 <section id="sobre-nosotros" class="about-verifactu-section home-section">
-  <app-about-verifactu-info-block [content]="content"></app-about-verifactu-info-block>
+  <div class="home-section__inner">
+    <app-info-left
+      [title]="content.title"
+      [highlightedWord]="content.highlightedWord"
+      [description]="content.description"
+      [buttonLabel]="content.buttonLabel"
+      buttonLink="#contacto"
+      [visuals]="visuals">
+    </app-info-left>
+  </div>
 </section>

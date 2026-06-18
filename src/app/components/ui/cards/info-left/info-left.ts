@@ -1,27 +1,20 @@
 import { Component, Input } from '@angular/core';
 
+import { InfoLeftVisual } from '../../../../interfaces/data/info-left-visual.interface';
 import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
-import { BackgroundColorInfoCard } from '../background-color-info-card/background-color-info-card';
 
 @Component({
   selector: 'app-info-left',
   standalone: true,
-  imports: [
-    AppButtonComponent,
-    BackgroundColorInfoCard
-  ],
+  imports: [AppButtonComponent],
   templateUrl: './info-left.html',
   styleUrl: './info-left.css',
 })
 export class InfoLeft {
   @Input() title = '';
-  @Input() paragraphs: string[] = [];
+  @Input() highlightedWord = '';
+  @Input() description = '';
   @Input() buttonLabel = '';
-  @Input() buttonLink = '/about';
-  @Input() image = '';
-  @Input() imageAlt = '';
-  @Input() cardTitle = '';
-  @Input() cardEmphasis = '';
-  @Input() cardButtonLabel = '';
-  @Input() cardButtonLink = '/contact';
+  @Input() buttonLink = '#contacto';
+  @Input() visuals: InfoLeftVisual[] = [];
 }

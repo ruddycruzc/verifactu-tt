@@ -1,28 +1,38 @@
 <div class="info-left">
   <div class="info-left__content">
-    <h2>{{ title }}</h2>
+    <h2>
+      {{ title }}
 
-    @for (paragraph of paragraphs; track paragraph) {
-      <p>{{ paragraph }}</p>
+      @if (highlightedWord) {
+        <span>{{ highlightedWord }}</span>
+      }
+    </h2>
+
+    @if (description) {
+      <p>{{ description }}</p>
     }
 
     @if (buttonLabel) {
-      <app-button variant="primary" [routerLink]="buttonLink">
+      <app-button variant="primary" [href]="buttonLink">
         {{ buttonLabel }}
-        <span class="arrow">→</span>
       </app-button>
     }
   </div>
 
-  <div class="info-left__visuals">
-    <img [src]="image" [alt]="imageAlt || title" loading="lazy" decoding="async">
-
-    <app-background-color-info-card
-      variant="large"
-      [title]="cardTitle"
-      [emphasis]="cardEmphasis"
-      [buttonLabel]="cardButtonLabel"
-      [buttonLink]="cardButtonLink">
-    </app-background-color-info-card>
+  <div class="info-left__visuals" aria-label="Contenido visual">
+    @for (visual of visuals; track visual.src) {
+      @if (visual.type === 'video') {
+        <video
+          [src]="visual.src"
+          [attr.aria-label]="visual.alt"
+          autoplay
+          muted
+          loop
+          playsinline>
+        </video>
+      } @else {
+        <img [src]="visual.src" [alt]="visual.alt" loading="lazy" decoding="async">
+      }
+    }
   </div>
 </div>
