@@ -8,6 +8,8 @@ export interface HeroContent {
 
   image: string;
 
+  tabletImage?: string;
+
   primaryButton: string;
 
   secondaryButton: string;

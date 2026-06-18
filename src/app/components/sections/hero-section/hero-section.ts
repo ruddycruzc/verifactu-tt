@@ -1,12 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { HERO_CONTENT } from '../../../data/verifactu/hero.data';
-import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
+import { HeroContentComponent } from '../../ui/hero/hero-content/hero-content';
+import { HeroImage } from '../../ui/hero/hero-image/hero-image';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [AppButtonComponent],
+  imports: [HeroContentComponent, HeroImage],
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.css'
 })
@@ -42,13 +43,13 @@ export class HeroSection implements OnInit, OnDestroy {
 
     this.charIndex += this.isDeleting ? -1 : 1;
 
-    let delay = this.isDeleting ? 45 : 95;
+    let delay = this.isDeleting ? 70 : 130;
 
     if (!this.isDeleting && this.charIndex === word.length) {
-      delay = 7000;
+      delay = 2200;
       this.isDeleting = true;
     } else if (this.isDeleting && this.charIndex === 0) {
-      delay = 500;
+      delay = 650;
       this.isDeleting = false;
       this.wordIndex = (this.wordIndex + 1) % words.length;
     }

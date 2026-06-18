@@ -12,7 +12,11 @@ export const HERO_CONTENT: HeroContent =  {
     'INNOVACIÓN'
   ],
 
-image: '/images/hero/verifactu-hero.png',
+  image:
+    '/images/hero/verifactu-hero.png',
+
+  tabletImage:
+    '/images/hero/verifactu-hero-square.png',
 
   primaryButton:
     'Solicitar información',
