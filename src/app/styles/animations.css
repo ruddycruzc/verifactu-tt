@@ -1,0 +1,122 @@
+.reveal-up {
+  animation: reveal-up 640ms ease both;
+}
+
+.tt-card-reveal {
+  opacity: 0.86;
+  transform: translate3d(0, 2.25rem, 0) scale(0.985);
+  transform-origin: bottom center;
+  will-change: transform, opacity;
+}
+
+.tt-reveal-visible .tt-card-reveal,
+.tt-card-reveal.tt-reveal-visible {
+  animation: tt-card-reveal var(--reveal-duration, 820ms) cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--reveal-delay, 0ms) + (var(--reveal-index, 0) * var(--reveal-stagger, 120ms)));
+}
+
+@supports (animation-timeline: view()) {
+  .reveal-up {
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.9rem);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.65;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tt-card-reveal {
+  0% {
+    opacity: 0.86;
+    transform: translate3d(0, 2.25rem, 0) scale(0.985);
+  }
+
+  58% {
+    opacity: 1;
+    transform: translate3d(0, -0.16rem, 0) scale(1.003);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up,
+  .tt-card-reveal,
+  .tt-reveal-visible .tt-card-reveal,
+  .tt-card-reveal.tt-reveal-visible {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    will-change: auto;
+  }
+}

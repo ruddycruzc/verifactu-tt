@@ -6,14 +6,15 @@ import {
 from '../../../data/verifactu/solution-features.data';
 
 import {
-  SolutionCard
+  ProjectCard
 }
-from '../../ui/cards/solution-card/solution-card';
+from '../../ui/cards/project-card/project-card';
+import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-solution-section',
   standalone: true,
-  imports: [SolutionCard],
+  imports: [ProjectCard, ScrollRevealDirective],
   templateUrl: './solution-section.html',
   styleUrl: './solution-section.css'
 })

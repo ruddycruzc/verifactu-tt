@@ -1,14 +1,15 @@
-<section class="hero-section">
+<section id="inicio" class="hero-section">
 
-  <div class="hero-section__container">
+  <div class="hero-section__container reveal-up">
 
-    <div class="hero-section__image">
+    <div class="hero-section__image-box">
       <img
+        class="hero-section__image"
         [src]="hero.image"
         [alt]="hero.title">
     </div>
 
-    <div class="hero-section__content">
+    <div class="hero-section__text-box">
 
       <h1 class="hero-section__title">
         {{ hero.title }}
@@ -24,21 +25,21 @@
 
       </p>
 
-<div class="hero-section__actions">
+      <div class="hero-section__actions">
 
-  <app-button>
+        <app-button href="#contacto">
 
-    {{ hero.primaryButton }}
+          {{ hero.primaryButton }}
 
-  </app-button>
+        </app-button>
 
-  <app-button variant="secondary">
+        <app-button variant="secondary" href="#facturacion">
 
-    {{ hero.secondaryButton }}
+          {{ hero.secondaryButton }}
 
-  </app-button>
+        </app-button>
 
-</div>
+      </div>
 
     </div>
 
