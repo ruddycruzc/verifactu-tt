@@ -1,4 +1,5 @@
 .about-verifactu-section {
   background: var(--color-bkg-light);
+  padding-block: 0;
   scroll-margin-top: 7rem;
 }

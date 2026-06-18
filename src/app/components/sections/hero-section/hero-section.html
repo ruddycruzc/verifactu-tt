@@ -1,47 +1,20 @@
 <section id="inicio" class="hero-section">
 
-  <div class="hero-section__container reveal-up">
+  <div class="hero-section__container">
 
-    <div class="hero-section__image-box">
-      <img
-        class="hero-section__image"
-        [src]="hero.image"
-        [alt]="hero.title">
-    </div>
+    <app-hero-image
+      [image]="hero.image"
+      [tabletImage]="hero.tabletImage || hero.image"
+      [imageAlt]="hero.title">
+    </app-hero-image>
 
-    <div class="hero-section__text-box">
-
-      <h1 class="hero-section__title">
-        {{ hero.title }}
-      </h1>
-
-      <p class="hero-section__subtitle">
-
-        {{ hero.subtitle }}
-
-        <span class="hero-section__highlight">
-          {{ currentWord }}
-        </span>
-
-      </p>
-
-      <div class="hero-section__actions">
-
-        <app-button href="#contacto">
-
-          {{ hero.primaryButton }}
-
-        </app-button>
-
-        <app-button variant="secondary" href="#facturacion">
-
-          {{ hero.secondaryButton }}
-
-        </app-button>
-
-      </div>
-
-    </div>
+    <app-hero-content
+      [title]="hero.title"
+      [subtitle]="hero.subtitle"
+      [highlightedWord]="currentWord()"
+      [primaryButton]="hero.primaryButton"
+      [secondaryButton]="hero.secondaryButton">
+    </app-hero-content>
 
   </div>
 

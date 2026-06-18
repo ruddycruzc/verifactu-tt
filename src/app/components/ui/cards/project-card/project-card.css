@@ -6,7 +6,7 @@
 .project-card {
   min-width: 0;
   display: block;
-  padding: var(--project-card-padding);
+  padding: 0;
   color: var(--text-heading-color);
 }
 
