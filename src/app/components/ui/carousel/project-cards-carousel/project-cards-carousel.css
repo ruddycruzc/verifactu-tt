@@ -60,16 +60,15 @@
 
 .project-cards-carousel__viewport {
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  
   scroll-snap-type: x mandatory;
   padding-top: clamp(2rem, 4vw, 3.5rem);
-  padding-left: var(--carousel-edge-offset);
   padding-right: 0;
   box-sizing: border-box;
   cursor: grab;
   touch-action: pan-x;
   scrollbar-width: none;
+  padding-left: var(--carousel-edge-offset);
 }
 
 .project-cards-carousel__viewport:active {
@@ -86,6 +85,7 @@
   gap: var(--cards-gap);
   width: max-content;
   padding-right: 0;
+  
 }
 
 .project-cards-carousel__slide {
