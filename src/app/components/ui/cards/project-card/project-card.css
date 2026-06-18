@@ -51,10 +51,20 @@
 :host-context(.solution-section) .project-card p {
   color: rgba(255, 255, 255, 0.72);
 }
-
+@media (max-width: 980px) {
+  .project-card {
+  padding: 0;
+  
+}
+}
 @media (max-width: 640px) {
   .project-card img,
   .project-card video {
     aspect-ratio: var(--project-card-image-ratio-mobile);
   }
+  .project-card {
+
+  padding: 0;
+  
+}
 }

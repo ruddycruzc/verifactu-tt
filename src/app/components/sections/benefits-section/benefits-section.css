@@ -1,4 +1,4 @@
 .benefits-section {
   background: var(--color-bkg-light);
-  padding-inline: 0;
+  scroll-margin-top: 7rem;
 }

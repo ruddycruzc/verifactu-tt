@@ -35,7 +35,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: clamp(3rem, 8vw, 6rem) var(--grid-gap-wide);
+  gap: clamp(1rem, 8vw, 4rem) var(--grid-gap-wide);
   align-items: start;
 }
 
@@ -60,6 +60,12 @@
   .solution-section__layout {
     grid-template-columns: 1fr;
   }
+  .solution-section__layout {
+ 
+  gap:1rem;
+  
+ 
+}
 
   .solution-section__item,
   .solution-section__item:nth-child(1),
