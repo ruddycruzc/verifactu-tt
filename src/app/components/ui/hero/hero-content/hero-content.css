@@ -1,0 +1,107 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 37rem;
+  min-width: 0;
+  margin-left: clamp(-5rem, -4vw, -1.5rem);
+  text-align: left;
+  animation: fadeUp 720ms ease both;
+}
+
+.hero-content__title {
+  margin: 0 0 0.625rem;
+  color: var(--color-black);
+  font-size: var(--verifactu-h1-size);
+  font-weight: var(--font-weight-black);
+  line-height: 0.9;
+  letter-spacing: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-content__subtitle {
+  margin: 0;
+  color: var(--color-black);
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.75rem, 3.6vw, 3rem);
+  font-weight: var(--font-weight-black);
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+
+.hero-content__highlight {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 1.1em;
+  margin-top: 0.25rem;
+  padding-right: 0.35rem;
+  color: var(--color-primary);
+  border-right: 3px solid var(--color-primary);
+  white-space: nowrap;
+  vertical-align: bottom;
+  animation: heroCursor 0.75s step-end infinite;
+}
+
+.hero-content__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
+  margin-top: var(--grid-gap-wide);
+}
+
+@media (max-width: 860px) {
+  .hero-content {
+    align-items: center;
+    max-width: 34rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-content__highlight {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-content__actions {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content__subtitle {
+    font-size: clamp(1.5rem, 9vw, 2.25rem);
+  }
+
+  .hero-content__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-content__actions app-button {
+    width: 100%;
+  }
+}
+
+@keyframes heroCursor {
+  0%,
+  100% {
+    border-color: var(--color-primary);
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}

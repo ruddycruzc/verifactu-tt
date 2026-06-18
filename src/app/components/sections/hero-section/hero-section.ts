@@ -1,19 +1,20 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 
 import { HERO_CONTENT } from '../../../data/verifactu/hero.data';
-import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
+import { HeroContentComponent } from '../../ui/hero/hero-content/hero-content';
+import { HeroImage } from '../../ui/hero/hero-image/hero-image';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [AppButtonComponent],
+  imports: [HeroContentComponent, HeroImage],
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.css'
 })
 export class HeroSection implements OnInit, OnDestroy {
 
   readonly hero = HERO_CONTENT;
-  currentWord = '';
+  readonly currentWord = signal('');
 
   private wordIndex = 0;
   private charIndex = 0;
@@ -36,19 +37,19 @@ export class HeroSection implements OnInit, OnDestroy {
       : ['DIGITALIZACIÓN'];
     const word = words[this.wordIndex % words.length];
 
-    this.currentWord = this.isDeleting
+    this.currentWord.set(this.isDeleting
       ? word.substring(0, this.charIndex - 1)
-      : word.substring(0, this.charIndex + 1);
+      : word.substring(0, this.charIndex + 1));
 
     this.charIndex += this.isDeleting ? -1 : 1;
 
-    let delay = this.isDeleting ? 45 : 95;
+    let delay = this.isDeleting ? 60 : 115;
 
     if (!this.isDeleting && this.charIndex === word.length) {
-      delay = 7000;
+      delay = 2200;
       this.isDeleting = true;
     } else if (this.isDeleting && this.charIndex === 0) {
-      delay = 500;
+      delay = 650;
       this.isDeleting = false;
       this.wordIndex = (this.wordIndex + 1) % words.length;
     }
