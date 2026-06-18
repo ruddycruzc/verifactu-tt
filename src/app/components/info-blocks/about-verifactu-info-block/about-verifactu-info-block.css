@@ -2,9 +2,15 @@
   display: block;
   width: min(100%, var(--page-max-width));
   margin-inline: auto;
+  perspective: 75rem;
 }
 
 .about-verifactu-info-block {
+  --video-reveal-progress: 0;
+  --video-reveal-scale: 0.68;
+  --video-reveal-y: 2.75rem;
+  --video-reveal-opacity: 0.92;
+
   display: grid;
   grid-template-columns: minmax(18rem, 0.86fr) minmax(32rem, 1.45fr);
   gap: clamp(3rem, 7vw, 7rem);
@@ -13,6 +19,10 @@
   border-radius: var(--radius-panel);
   background: var(--info-left-background);
   box-sizing: border-box;
+  opacity: var(--video-reveal-opacity);
+  transform: translate3d(0, var(--video-reveal-y), 0) scale(var(--video-reveal-scale));
+  transform-origin: center center;
+  will-change: transform, opacity;
 }
 
 .about-verifactu-info-block__title {
@@ -71,5 +81,13 @@
 
   .about-verifactu-info-block__visuals img {
     min-height: 21rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-verifactu-info-block {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
   }
 }

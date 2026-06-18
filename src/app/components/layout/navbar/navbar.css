@@ -137,12 +137,10 @@
   stroke-linecap: round;
 }
 
-.navbar__hamburger span {
+.navbar__hamburger img {
   display: block;
-  width: 1.45rem;
-  height: 0.125rem;
-  margin: 0.25rem auto;
-  background: var(--color-black);
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 @media (max-width: 1024px) {

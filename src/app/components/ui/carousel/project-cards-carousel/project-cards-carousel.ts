@@ -3,14 +3,7 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 import { ProjectCard } from '../../cards/project-card/project-card';
-
-export interface ProjectCardItem {
-  title: string;
-  description: string;
-  image: string;
-  imageAlt?: string;
-  mediaType?: 'image' | 'video';
-}
+import { ProjectCardItem } from '../../../../interfaces/data/project-card-item.interface';
 
 @Component({
   selector: 'app-project-cards-carousel',

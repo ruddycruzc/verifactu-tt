@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 import { BENEFITS }
 from '../../../data/verifactu/benefits.data';
+import { ProjectCardItem } from '../../../interfaces/data/project-card-item.interface';
 
 import {
-  ProjectCardItem,
   ProjectCardsCarousel
 } from '../../ui/carousel/project-cards-carousel/project-cards-carousel';
 

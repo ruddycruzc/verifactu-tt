@@ -13,9 +13,9 @@ import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.compo
 export class HeroSection implements OnInit, OnDestroy {
 
   readonly hero = HERO_CONTENT;
-  readonly typingText = 'TRANSFORMACIÓN DIGITAL';
   currentWord = '';
 
+  private wordIndex = 0;
   private charIndex = 0;
   private isDeleting = false;
   private timeoutId: number | null = null;
@@ -31,20 +31,26 @@ export class HeroSection implements OnInit, OnDestroy {
   }
 
   private playTypingEffect(): void {
+    const words = this.hero.highlightedWords.length
+      ? this.hero.highlightedWords
+      : ['DIGITALIZACIÓN'];
+    const word = words[this.wordIndex % words.length];
+
     this.currentWord = this.isDeleting
-      ? this.typingText.substring(0, this.charIndex - 1)
-      : this.typingText.substring(0, this.charIndex + 1);
+      ? word.substring(0, this.charIndex - 1)
+      : word.substring(0, this.charIndex + 1);
 
     this.charIndex += this.isDeleting ? -1 : 1;
 
-    let delay = this.isDeleting ? 50 : 100;
+    let delay = this.isDeleting ? 45 : 95;
 
-    if (!this.isDeleting && this.charIndex === this.typingText.length) {
+    if (!this.isDeleting && this.charIndex === word.length) {
       delay = 7000;
       this.isDeleting = true;
     } else if (this.isDeleting && this.charIndex === 0) {
       delay = 500;
       this.isDeleting = false;
+      this.wordIndex = (this.wordIndex + 1) % words.length;
     }
 
     this.timeoutId = window.setTimeout(() => this.playTypingEffect(), delay);
