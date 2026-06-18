@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/control-placas-tt/browser",
+    "public": "dist/verifactu-tt/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
