@@ -25,15 +25,28 @@ export class ProjectCardsCarousel {
   private dragStartX = 0;
   private scrollStart = 0;
 
+  private scroll(amount: number): void {
+
+    if (!this.viewport) {
+      return;
+    }
+
+    this.viewport.nativeElement.scrollBy({
+      left: amount,
+      behavior: 'smooth'
+    });
+  }
+
   prev(): void {
-    this.scroll(-380);
+    this.scroll(-360);
   }
 
   next(): void {
-    this.scroll(380);
+    this.scroll(360);
   }
 
   startDrag(event: PointerEvent): void {
+
     if (!this.viewport) {
       return;
     }
@@ -41,30 +54,38 @@ export class ProjectCardsCarousel {
     this.isDragging = true;
     this.dragStartX = event.clientX;
     this.scrollStart = this.viewport.nativeElement.scrollLeft;
-    this.viewport.nativeElement.setPointerCapture(event.pointerId);
+
+    this.viewport.nativeElement.setPointerCapture(
+      event.pointerId
+    );
   }
 
   drag(event: PointerEvent): void {
-    if (!this.isDragging || !this.viewport) {
+
+    if (
+      !this.isDragging ||
+      !this.viewport
+    ) {
       return;
     }
 
-    this.viewport.nativeElement.scrollLeft = this.scrollStart - (event.clientX - this.dragStartX);
+    const delta =
+      event.clientX - this.dragStartX;
+
+    this.viewport.nativeElement.scrollLeft =
+      this.scrollStart - delta;
   }
 
   endDrag(event: PointerEvent): void {
+
     if (!this.viewport) {
       return;
     }
 
     this.isDragging = false;
-    this.viewport.nativeElement.releasePointerCapture(event.pointerId);
-  }
 
-  private scroll(amount: number): void {
-    this.viewport?.nativeElement.scrollBy({
-      left: amount,
-      behavior: 'smooth',
-    });
+    this.viewport.nativeElement.releasePointerCapture(
+      event.pointerId
+    );
   }
 }
