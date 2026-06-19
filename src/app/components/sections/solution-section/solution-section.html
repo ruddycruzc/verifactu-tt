@@ -1,4 +1,4 @@
-<section class="solution-section">
+<section id="facturacion" class="solution-section">
 
   <div class="solution-section__header">
 
@@ -12,22 +12,31 @@
 
     </h2>
 
-    <p>
-      [ ADAPTADA TÁCTICA TIC ]
-    </p>
-
   </div>
 
-  <div class="solution-section__grid">
+  <div class="solution-section__layout">
 
     @for (
       feature of features;
-      track feature.title
+      track feature.title;
+      let index = $index
     ) {
 
-      <app-solution-card
-        [feature]="feature">
-      </app-solution-card>
+      <div
+        class="solution-section__item tt-card-reveal"
+        appScrollReveal
+        [scrollRevealRootMargin]="'0px 0px -10% 0px'"
+        [scrollRevealThreshold]="0.12"
+        [style.--reveal-index]="index">
+        <app-project-card
+          [image]="feature.media"
+          [mediaType]="feature.mediaType"
+          [imageAlt]="feature.title"
+          [title]="feature.title"
+          [description]="feature.description"
+          [showButton]="false">
+        </app-project-card>
+      </div>
 
     }
 

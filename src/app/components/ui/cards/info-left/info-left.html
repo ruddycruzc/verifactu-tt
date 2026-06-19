@@ -1,0 +1,38 @@
+<div class="info-left">
+  <div class="info-left__content">
+    <h2>
+      {{ title }}
+
+      @if (highlightedWord) {
+        <span>{{ highlightedWord }}</span>
+      }
+    </h2>
+
+    @if (description) {
+      <p>{{ description }}</p>
+    }
+
+    @if (buttonLabel) {
+      <app-button variant="primary" [href]="buttonLink">
+        {{ buttonLabel }}
+      </app-button>
+    }
+  </div>
+
+  <div class="info-left__visuals" aria-label="Contenido visual">
+    @for (visual of visuals; track visual.src) {
+      @if (visual.type === 'video') {
+        <video
+          [src]="visual.src"
+          [attr.aria-label]="visual.alt"
+          autoplay
+          muted
+          loop
+          playsinline>
+        </video>
+      } @else {
+        <img [src]="visual.src" [alt]="visual.alt" loading="lazy" decoding="async">
+      }
+    }
+  </div>
+</div>

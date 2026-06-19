@@ -1,73 +1,192 @@
-.contact-section {
-
-  padding:
-    var(--space-2xl)
-    var(--space-lg);
-}
-
-.contact-section__container {
-
-  max-width: 900px;
-
-  margin: 0 auto;
-}
-
-.contact-section__header {
-
-  text-align: center;
-
-  margin-bottom: var(--space-xl);
-}
-
-.contact-section__header h2 {
-
-  font-size: 3rem;
-
-  font-weight: 800;
-
-  margin-bottom: 1rem;
-}
-
-.contact-section__header p {
-
-  max-width: 700px;
-
-  margin: 0 auto;
-
-  line-height: 1.7;
-}
-
-.contact-section__form {
-
+.contact-container {
+  background-color: var(--form-section-background);
+  padding: var(--section-padding-y) var(--section-padding-x);
   display: flex;
-
-  flex-direction: column;
-
-  gap: var(--space-lg);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
 }
 
-.contact-section__field {
-
+.contact-content {
+  max-width: var(--page-max-width);
+  width: 100%;
   display: flex;
-
-  flex-direction: column;
-
-  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--contact-column-gap);
 }
 
-.contact-section__field input,
-.contact-section__field textarea {
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--title-subtitle-spacing);
+}
 
-  padding: 1rem;
+.contact-title {
+  margin: 0;
+  color: var(--text-heading-color);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-black);
+  line-height: var(--text-heading-line-height);
+  letter-spacing: 0;
+}
 
-  border: 1px solid #ddd;
+.contact-title span {
+  color: var(--text-highlight-color);
+}
 
-  border-radius: var(--radius-md);
+.contact-text {
+  max-width: var(--contact-text-max-width);
+  margin: 0;
+  color: var(--text-body-color);
+  font-size: var(--font-size-body-medium);
+  line-height: var(--text-body-line-height);
+}
 
+.info-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--contact-form-gap);
+  margin-top: var(--card-title-description-gap);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--title-subtitle-spacing);
+}
+
+.icon-box {
+  width: var(--contact-icon-size);
+  height: var(--contact-icon-size);
+  background-color: var(--text-highlight-color);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-svg {
+  width: var(--contact-icon-glyph-size);
+  height: var(--contact-icon-glyph-size);
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-heading-color);
+  font-size: var(--font-size-sm);
+  line-height: var(--text-body-line-height);
+}
+
+.info-text strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+.info-text span {
+  color: var(--text-body-color);
+}
+
+.contact-card {
+  flex: 1;
+  max-width: var(--contact-card-max-width);
+  width: 100%;
+  padding: var(--contact-form-padding);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  background: var(--card-background);
+  box-shadow: var(--card-shadow);
+  box-sizing: border-box;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--contact-form-gap);
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: var(--contact-form-gap);
+}
+
+.inline-group {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: var(--form-input-padding-y) var(--form-input-padding-x);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--button-radius);
+  color: var(--text-body-color);
+  background-color: var(--color-white);
   font: inherit;
+  font-size: var(--font-size-sm);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
-.contact-section__field textarea {
-
+.contact-form textarea {
+  min-height: 9rem;
+  border-radius: var(--radius-l);
   resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-body-color);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--text-highlight-color);
+  box-shadow: var(--shadow-focus);
+}
+
+.contact-form app-button {
+  width: 100%;
+  min-height: var(--button-height);
+}
+
+@media (max-width: 968px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-info,
+  .contact-card {
+    max-width: none;
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-card {
+    padding: var(--section-padding-x-mobile);
+  }
+
+  .contact-form {
+    gap: var(--title-subtitle-spacing);
+  }
+
+  .info-item {
+    align-items: flex-start;
+  }
 }

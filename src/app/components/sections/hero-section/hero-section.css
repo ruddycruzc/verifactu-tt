@@ -1,93 +1,47 @@
 .hero-section {
-  min-height: 100vh;
-
+  width: 100%;
+  min-height: clamp(36rem, 78vh, 48rem);
   display: flex;
-  align-items: center;
-
-  padding:
-    var(--space-xl)
-    var(--space-lg);
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 var(--section-padding-x);
+  overflow: hidden;
+  background: var(--color-bkg-white);
+  scroll-margin-top: 7rem;
+  box-sizing: border-box;
 }
 
 .hero-section__container {
-
-  max-width: 1200px;
-
-  margin: 0 auto;
-
-  width: 100%;
-
+  width: min(100%, var(--page-max-width));
+  min-height: clamp(36rem, 78vh, 48rem);
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: var(--space-2xl);
-
+  grid-template-columns: minmax(0, 1.05fr) minmax(25rem, 0.95fr);
   align-items: center;
+  gap: clamp(0rem, 2vw, 2rem);
+  margin-inline: auto;
+  box-sizing: border-box;
 }
 
-.hero-section__image img {
-  width: 100%;
-
-  max-width: 500px;
-}
-.hero-section__title {
-
-  font-size: var(--font-size-h1);
-
-  line-height: 0.95;
-
-  font-weight: 800;
-}
-.hero-section__subtitle {
-  margin-top: 1rem;
-
-  font-size: 1rem;
-
-  font-weight: 600;
-
-  letter-spacing: 0.08em;
-
-  text-transform: uppercase;
-}
-.hero-section__highlight {
-
-  color: var(--color-primary);
-
-  display: block;
-
-  margin-top: 0.25rem;
+.hero-section__container app-hero-image {
+  align-self: stretch;
 }
 
-.hero-section__actions {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: var(--space-md);
-
-  margin-top: var(--space-lg);
-}
-
-@media (max-width: 768px) {
+@media (max-width: 860px) {
+  .hero-section {
+    min-height: auto;
+    padding: 5.75rem var(--section-padding-x) var(--section-padding-y-tablet);
+  }
 
   .hero-section__container {
-
+    min-height: auto;
     grid-template-columns: 1fr;
-
     text-align: center;
+    gap: 2rem;
   }
+}
 
-  .hero-section__actions {
-
-    justify-content: center;
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 5.25rem var(--section-padding-x) var(--section-padding-y-mobile);
   }
-
-  .hero-section__image {
-
-    order: -1;
-  }
-
 }

@@ -7,7 +7,7 @@ export const ABOUT_VERIFACTU_CONTENT: AboutVerifactuContent = {
   highlightedWord: 'VERIFACTU',
 
   description:
-    'Es un sistema impulsado por la AEAT...',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis arcu vitae lectus viverra, sed luctus erat luctus. Donec gravida, justo non pretium gravida, augue nisl interdum lectus, sed porta ipsum nibh vitae augue.',
 
   buttonLabel:
     'Más información',

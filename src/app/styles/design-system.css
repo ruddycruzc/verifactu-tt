@@ -1,0 +1,263 @@
+:root {
+  font-family: 'Inter', sans-serif;
+
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-heading: 'Be Vietnam Pro', sans-serif;
+
+  --font-size-sm: 0.92rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.05rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.3rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3.5rem;
+  --font-size-h1: clamp(4rem, 8vw, 6rem);
+  --font-size-h2: 4rem;
+  --font-size-h3: 1.25rem;
+  --verifactu-h1-size: var(--font-size-h1);
+  --verifactu-h2-size: clamp(2.75rem, 6vw, 4.5rem);
+  --font-size-hero: var(--font-size-h1);
+  --font-size-hero-description: clamp(1.1rem, 1.55vw, 1.5rem);
+  --font-size-card-title: clamp(1.35rem, 1.55vw, 1.5rem);
+  --font-size-card-description: clamp(1.05rem, 1.3vw, 1.25rem);
+  --font-size-body-large: clamp(1.05rem, 1.3vw, 1.25rem);
+  --font-size-body-medium: clamp(1rem, 1.15vw, 1.15rem);
+  --font-size-verifactu-title: var(--verifactu-h1-size);
+  --font-size-verifactu-title-md: var(--verifactu-h2-size);
+
+  --line-height-tight: 1.04;
+  --line-height-heading: 1.15;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.65;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  --page-max-width: 88.0625rem;
+  --content-max-width: 74.75rem;
+  --projects-content-width: 53.125rem;
+  --project-detail-card-padding: clamp(2.5rem, 4vw, 4rem);
+  --section-padding-x-desktop: clamp(6rem, 9vw, 8rem);
+  --section-padding-x-tablet: 3rem;
+  --section-padding-x-mobile: 1.25rem;
+  --section-padding-y-desktop: 7rem;
+  --section-padding-y-tablet: 3rem;
+  --section-padding-y-mobile: 2.5rem;
+  --section-padding-x: var(--section-padding-x-desktop);
+  --section-padding-y: var(--section-padding-y-desktop);
+  --section-padding-y-sm: var(--section-padding-y-mobile);
+  --section-padding-y-lg: 6rem;
+  --container-padding-sm: var(--section-padding-x-mobile);
+  --container-padding: var(--section-padding-x);
+  --container-padding-lg: var(--section-padding-x-desktop);
+
+  --grid-gap: 1.5rem;
+  --grid-gap-wide: clamp(2rem, 6vw, 4rem);
+  --section-gap: clamp(4rem, 9vw, 7.5rem);
+  --title-subtitle-spacing: 1rem;
+  --card-title-description-gap: 0.25rem;
+  --card-content-padding: 1.5rem;
+  --project-card-image-ratio: 1.365 / 1;
+  --project-card-image-ratio-mobile: 1.15 / 1;
+  --project-card-content-gap: 0.375rem;
+  --project-card-padding: 1rem;
+  --cards-offset-left: var(--section-padding-x);
+  --cards-gap: var(--grid-gap);
+  --cards-width: min(var(--page-max-width), calc(100vw - var(--cards-offset-left)));
+  --card-size: calc((var(--cards-width) - (var(--cards-gap) * 2)) / 3);
+  --contact-form-gap: 1.5rem;
+  --contact-form-padding: clamp(1.5rem, 3vw, 2rem);
+  --contact-column-gap: clamp(2rem, 5vw, 4.5rem);
+  --contact-text-max-width: 30rem;
+  --contact-card-max-width: 34.375rem;
+  --form-input-padding-y: 1rem;
+  --form-input-padding-x: 1.5rem;
+  --form-input-font-size: 0.95rem;
+  --contact-icon-size: 3.25rem;
+  --contact-icon-glyph-size: 1.375rem;
+
+  --color-black: #111111;
+  --color-white: #ffffff;
+  --color-grey-50: #f6f6f6;
+  --color-grey-100: #f5f5f5;
+  --color-grey-200: #eeeeee;
+  --color-grey-300: #ececec;
+  --color-grey-500: #ababab;
+  --color-grey-600: #737373;
+  --color-grey-700: #4d4d4d;
+  --color-primary: #e13d62;
+  --color-primary-hover: #ca3455;
+  --color-secondary: var(--color-black);
+  --color-tertiary: #f9e3e8;
+  --color-accent-strong: #e13d62;
+  --color-accent-soft: #f6c5d0;
+  --color-accent-muted: #d34864;
+  --color-bkg-black: var(--color-black);
+  --color-bkg-grey: var(--color-grey-100);
+  --color-bkg-light: var(--color-white);
+  --color-bkg-white: var(--color-white);
+  --color-background: var(--color-white);
+  --color-surface-dark: var(--color-black);
+  --color-surface-muted: var(--color-grey-50);
+  --color-surface-card: var(--color-grey-200);
+  --color-ink: var(--color-black);
+  --color-text: var(--color-black);
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-grey-600);
+  --color-text-soft: var(--color-grey-700);
+  --color-text-muted: var(--color-grey-600);
+  --color-text-subtle: var(--color-grey-500);
+  --color-text-light: var(--color-white);
+  --color-text-green: var(--color-primary);
+  --color-card-white: var(--color-white);
+  --color-card-contrast: var(--color-grey-50);
+  --color-card-green: var(--color-primary);
+  --color-surface-disabled: #dedede;
+  --color-border: var(--color-grey-300);
+  --color-border-alpha: rgba(17, 17, 17, 0.08);
+  --color-border-alpha-strong: rgba(17, 17, 17, 0.14);
+
+  --radius-sm: 0.5rem;
+  --radius-m: 0.75rem;
+  --radius-md: var(--radius-m);
+  --radius-l: 1rem;
+  --radius-lg: var(--radius-l);
+  --radius-xl: 1.25rem;
+  --radius-cards: 1rem;
+  --radius-panel: 1rem;
+  --radius-pill: 999rem;
+  --border-width-hairline: 0.0625rem;
+  --shadow-soft: 0 0.25rem 1.25rem rgba(17, 17, 17, 0.04);
+  --shadow-card: 0 1.125rem 2.8125rem rgba(17, 17, 17, 0.08);
+  --shadow-focus: 0 0 0 0.25rem rgba(225, 61, 98, 0.18);
+
+  --transition-base: 220ms ease;
+  --transition-slow: 360ms ease;
+  --transition-card: 640ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  --text-heading-color: var(--color-ink);
+  --text-body-color: var(--color-text-soft);
+  --text-highlight-color: var(--color-primary);
+  --text-heading-line-height: var(--line-height-heading);
+  --text-body-line-height: var(--line-height-base);
+
+  --card-background: var(--color-card-white);
+  --card-background-hover: var(--color-card-white);
+  --card-border: 0;
+  --card-border-hover: var(--color-primary);
+  --card-radius: var(--radius-cards);
+  --card-shadow: none;
+  --card-shadow-hover: var(--shadow-card);
+  --card-transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+  --card-hover-transform: translateY(-0.1875rem);
+
+  --button-text: var(--color-text);
+  --button-text-inverse: var(--color-white);
+  --button-primary-bg: var(--color-primary);
+  --button-primary-bg-hover: var(--color-primary-hover);
+  --button-secondary-bg: var(--color-white);
+  --button-secondary-bg-hover: var(--color-tertiary);
+  --button-tertiary-color: var(--color-primary);
+  --button-tertiary-color-hover: var(--color-primary-hover);
+  --button-height: 3.5rem;
+  --button-height-sm: 2rem;
+  --button-height-lg: 4rem;
+  --button-padding: 1.75rem;
+  --button-gap: 0.625rem;
+  --button-radius: 999rem;
+  --button-font-size: var(--font-size-base);
+  --button-font-weight: var(--font-weight-medium);
+  --button-border-width: 0.125rem;
+  --button-stack-width: 100%;
+  --button-stack-max-width: 24rem;
+
+  --nav-link-color: var(--color-text-primary);
+  --nav-link-active-color: var(--color-primary);
+  --nav-link-font-size: clamp(0.92rem, 1vw, 1.0625rem);
+  --nav-link-gap: clamp(1.55rem, 2.1vw, 2.25rem);
+  --nav-link-font-weight: var(--font-weight-regular);
+  --nav-link-active-font-weight: var(--font-weight-bold);
+
+  --info-left-background: var(--color-bkg-black);
+  --info-left-text-color: var(--color-white);
+  --info-left-body-color: var(--color-white);
+  --form-section-background: var(--color-bkg-grey);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+  letter-spacing: 0;
+  color: var(--text-heading-color);
+}
+
+h1 {
+  font-size: var(--verifactu-h1-size);
+}
+
+h2 {
+  font-size: var(--verifactu-h2-size);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --section-padding-x: var(--section-padding-x-tablet);
+    --section-padding-y: var(--section-padding-y-tablet);
+    --container-padding: var(--section-padding-x-tablet);
+    --page-margin: var(--section-padding-x-tablet);
+    --font-size-h1: clamp(2.75rem, 7vw, 4rem);
+    --font-size-h2: clamp(2rem, 4.8vw, 2.65rem);
+  }
+}
+
+@media (max-width: 980px) {
+  :root {
+    --cards-offset-left: var(--section-padding-x);
+    --cards-width: calc(100vw - var(--cards-offset-left));
+    --card-size: min(23.75rem, calc(var(--cards-width) * 0.72));
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --cards-gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-padding-x: var(--section-padding-x-mobile);
+    --section-padding-y: var(--section-padding-y-mobile);
+    --container-padding: var(--section-padding-x-mobile);
+    --page-margin: var(--section-padding-x-mobile);
+    --font-size-h1: clamp(2.75rem, 12.5vw, 3.35rem);
+    --font-size-h2: clamp(1.9rem, 9vw, 2.5rem);
+    --font-size-hero-description: clamp(1rem, 4.6vw, 1.15rem);
+  }
+}
+
+.section-container {
+  padding-inline: var(--section-padding-x);
+  padding-block: var(--section-padding-y);
+}
+
+.home-section {
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.home-section__inner {
+  width: min(100%, var(--page-max-width));
+  margin-inline: auto;
+}
