@@ -7,6 +7,7 @@ import { AboutVerifactuSection } from '../../components/sections/about-verifactu
 import { BenefitsSection } from '../../components/sections/benefits-section/benefits-section';
 import { SolutionSection } from '../../components/sections/solution-section/solution-section';
 import { ContactSection } from '../../components/sections/contact-section/contact-section';
+import { FaqSection } from "../../components/sections/faq-section/faq-section";
 
 @Component({
   selector: 'app-home',
@@ -18,8 +19,9 @@ import { ContactSection } from '../../components/sections/contact-section/contac
     BenefitsSection,
     SolutionSection,
     ContactSection,
-    Footer
-  ],
+    Footer,
+    FaqSection
+],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

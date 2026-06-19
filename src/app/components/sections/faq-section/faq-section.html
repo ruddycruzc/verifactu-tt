@@ -1,0 +1,64 @@
+<section class="faq-container">
+
+  <div class="faq-content">
+
+    <div class="faq-header">
+
+      <h2 class="faq-title">
+
+        {{ faqContent.title}}
+
+        <span class="highlight-green">
+
+          {{ faqContent.titleHighlight }}
+
+        </span>
+
+      </h2>
+
+      <p class="faq-subtitle">
+
+        {{ faqContent.subtitle }}
+
+      </p>
+
+    </div>
+
+    <div class="faq-list">
+
+@for (
+  item of faqContent.items;
+  track item.question
+) {
+
+        <details
+          class="faq-item"
+          [attr.open]="item.isOpen ? '' : null">
+
+          <summary class="faq-question">
+
+            {{ item.question }}
+
+            <span class="faq-icon"></span>
+
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+
+              {{ item.answer }}
+
+            </p>
+
+          </div>
+
+        </details>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

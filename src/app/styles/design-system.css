@@ -187,8 +187,34 @@
   --info-left-background: var(--color-bkg-black);
   --info-left-text-color: var(--color-white);
   --info-left-body-color: var(--color-white);
+
   --form-section-background: var(--color-bkg-grey);
+
+/* ==========================
+   FAQ
+========================== */
+
+--faq-grid-gap: clamp(3rem, 6vw, 6rem);
+
+--faq-header-width: 28rem;
+
+--faq-header-width-tablet: 100%;
+
+--faq-answer-width: 42rem;
+
+--faq-icon-size: 2rem;
+
+--faq-icon-line-width: 0.75rem;
+
+--faq-icon-line-height: 2px;
+
+--faq-item-padding-y: 1.5rem;
+
+--color-info-text-width: 22rem;
+
 }
+
+
 
 h1,
 h2,
