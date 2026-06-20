@@ -4,6 +4,14 @@
     'Montserrat',
     sans-serif;
 
+  --font-family-heading:
+    'Be Vietnam Pro',
+    sans-serif;
+
+  --font-weight-heading: 100;
+
+  --font-weight-h2: 800;
+
   --font-size-body: 1rem;
 
   --font-size-h1:

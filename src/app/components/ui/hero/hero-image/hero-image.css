@@ -30,7 +30,7 @@
   animation: slideRight 720ms ease both;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .hero-image {
     justify-content: center;
     height: clamp(18rem, 46vh, 28rem);

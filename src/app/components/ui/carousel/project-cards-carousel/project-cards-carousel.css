@@ -31,7 +31,7 @@
   margin: 0;
   color: var(--text-heading-color);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-black);
+  font-weight: var(--text-h2-font-weight);
   line-height: 0.9;
 }
 
@@ -60,15 +60,17 @@
 
 .project-cards-carousel__viewport {
   width: 100%;
-  
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--carousel-edge-offset);
   padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-left: 0;
   padding-right: 0;
   box-sizing: border-box;
   cursor: grab;
-  touch-action: pan-x;
+  touch-action: auto;
   scrollbar-width: none;
-  padding-left: var(--carousel-edge-offset);
 }
 
 .project-cards-carousel__viewport:active {
@@ -84,8 +86,8 @@
   align-items: stretch;
   gap: var(--cards-gap);
   width: max-content;
-  padding-right: 0;
-  
+  padding-left: var(--carousel-edge-offset);
+  padding-right: var(--carousel-edge-offset);
 }
 
 .project-cards-carousel__slide {
@@ -109,6 +111,11 @@
 
   .project-cards-carousel__controls {
     display: none;
+  }
+
+  .project-cards-carousel__viewport {
+    cursor: auto;
+    touch-action: pan-x;
   }
 }
 

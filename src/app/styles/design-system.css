@@ -38,6 +38,8 @@
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
+  --font-weight-heading: 100;
+  --font-weight-h2: var(--font-weight-extrabold);
 
   --page-max-width: 88.0625rem;
   --content-max-width: 74.75rem;
@@ -47,10 +49,14 @@
   --section-padding-x-tablet: 3rem;
   --section-padding-x-mobile: 1.25rem;
   --section-padding-y-desktop: 7rem;
+  --first-section-padding-top-desktop: var(--space-2xl, 8rem);
   --section-padding-y-tablet: 3rem;
+  --first-section-padding-top-tablet: var(--space-xl, 6rem);
   --section-padding-y-mobile: 2.5rem;
+  --first-section-padding-top-mobile: var(--space-lg, 4rem);
   --section-padding-x: var(--section-padding-x-desktop);
   --section-padding-y: var(--section-padding-y-desktop);
+  --first-section-padding-top: var(--first-section-padding-top-desktop);
   --section-padding-y-sm: var(--section-padding-y-mobile);
   --section-padding-y-lg: 6rem;
   --container-padding-sm: var(--section-padding-x-mobile);
@@ -142,6 +148,9 @@
   --transition-card: 640ms cubic-bezier(0.16, 1, 0.3, 1);
 
   --text-heading-color: var(--color-ink);
+  --text-heading-font-family: var(--font-family-heading);
+  --text-heading-font-weight: var(--font-weight-heading);
+  --text-h2-font-weight: var(--font-weight-h2);
   --text-body-color: var(--color-text-soft);
   --text-highlight-color: var(--color-primary);
   --text-heading-line-height: var(--line-height-heading);
@@ -197,7 +206,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--text-heading-font-weight);
   line-height: var(--line-height-heading);
   letter-spacing: 0;
   color: var(--text-heading-color);
@@ -209,12 +218,14 @@ h1 {
 
 h2 {
   font-size: var(--verifactu-h2-size);
+  font-weight: var(--text-h2-font-weight);
 }
 
 @media (max-width: 1024px) {
   :root {
     --section-padding-x: var(--section-padding-x-tablet);
     --section-padding-y: var(--section-padding-y-tablet);
+    --first-section-padding-top: var(--first-section-padding-top-tablet);
     --container-padding: var(--section-padding-x-tablet);
     --page-margin: var(--section-padding-x-tablet);
     --font-size-h1: clamp(2.75rem, 7vw, 4rem);
@@ -240,6 +251,7 @@ h2 {
   :root {
     --section-padding-x: var(--section-padding-x-mobile);
     --section-padding-y: var(--section-padding-y-mobile);
+    --first-section-padding-top: var(--first-section-padding-top-mobile);
     --container-padding: var(--section-padding-x-mobile);
     --page-margin: var(--section-padding-x-mobile);
     --font-size-h1: clamp(2.75rem, 12.5vw, 3.35rem);
@@ -255,6 +267,10 @@ h2 {
 
 .home-section {
   padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.home-section:first-of-type {
+  padding-top: var(--first-section-padding-top);
 }
 
 .home-section__inner {

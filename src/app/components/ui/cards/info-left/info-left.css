@@ -19,7 +19,7 @@
   margin: 0;
   color: var(--info-left-text-color);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--text-h2-font-weight);
   line-height: var(--line-height-heading);
 }
 

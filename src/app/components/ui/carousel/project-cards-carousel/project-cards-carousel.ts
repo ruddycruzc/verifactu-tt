@@ -26,11 +26,11 @@ export class ProjectCardsCarousel {
   private scrollStart = 0;
 
   prev(): void {
-    this.scroll(-380);
+    this.scroll(-1);
   }
 
   next(): void {
-    this.scroll(380);
+    this.scroll(1);
   }
 
   startDrag(event: PointerEvent): void {
@@ -61,9 +61,28 @@ export class ProjectCardsCarousel {
     this.viewport.nativeElement.releasePointerCapture(event.pointerId);
   }
 
-  private scroll(amount: number): void {
-    this.viewport?.nativeElement.scrollBy({
-      left: amount,
+  private getSlideStep(): number {
+    const viewport = this.viewport?.nativeElement;
+    const slide = viewport?.querySelector<HTMLElement>('.project-cards-carousel__slide');
+
+    if (!viewport || !slide) {
+      return 360;
+    }
+
+    const track = viewport.querySelector<HTMLElement>('.project-cards-carousel__track');
+    const styles = getComputedStyle(track || viewport);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
+
+    return slide.getBoundingClientRect().width + gap;
+  }
+
+  private scroll(direction: 1 | -1): void {
+    if (!this.viewport) {
+      return;
+    }
+
+    this.viewport.nativeElement.scrollBy({
+      left: this.getSlideStep() * direction,
       behavior: 'smooth',
     });
   }

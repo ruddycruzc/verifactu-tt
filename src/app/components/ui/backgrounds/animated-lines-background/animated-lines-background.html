@@ -1,0 +1,25 @@
+<div
+  class="animated-lines-background"
+  [style.--hero-x.%]="cursorX"
+  [style.--hero-y.%]="cursorY"
+  aria-hidden="true">
+  <div class="animated-lines-background__wave">
+    <svg
+      class="animated-lines-background__svg animated-lines-background__svg--base"
+      viewBox="0 0 1200 360"
+      preserveAspectRatio="none">
+      @for (path of wavePaths; track path) {
+        <path [attr.d]="path"></path>
+      }
+    </svg>
+
+    <svg
+      class="animated-lines-background__svg animated-lines-background__svg--focus"
+      viewBox="0 0 1200 360"
+      preserveAspectRatio="none">
+      @for (path of wavePaths; track path) {
+        <path [attr.d]="path"></path>
+      }
+    </svg>
+  </div>
+</div>

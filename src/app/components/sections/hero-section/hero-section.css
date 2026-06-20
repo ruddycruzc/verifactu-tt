@@ -1,17 +1,25 @@
 .hero-section {
+  position: relative;
   width: 100%;
   min-height: clamp(36rem, 78vh, 48rem);
   display: flex;
   justify-content: center;
   align-items: stretch;
-  padding: 0 var(--section-padding-x);
+  padding: 0 var(--section-padding-x) 0;
   overflow: hidden;
   background: var(--color-bkg-white);
   scroll-margin-top: 7rem;
   box-sizing: border-box;
 }
 
+.hero-section app-animated-lines-background {
+  color: var(--color-border-alpha);
+  opacity: 0.5;
+}
+
 .hero-section__container {
+  position: relative;
+  z-index: 1;
   width: min(100%, var(--page-max-width));
   min-height: clamp(36rem, 78vh, 48rem);
   display: grid;
@@ -26,7 +34,7 @@
   align-self: stretch;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .hero-section {
     min-height: auto;
     padding: 5.75rem var(--section-padding-x) var(--section-padding-y-tablet);
@@ -42,6 +50,6 @@
 
 @media (max-width: 640px) {
   .hero-section {
-    padding: 5.25rem var(--section-padding-x) var(--section-padding-y-mobile);
+    padding: 5.25rem var(--section-padding-x) 0;
   }
 }

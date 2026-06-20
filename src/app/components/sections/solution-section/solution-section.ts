@@ -9,12 +9,13 @@ import {
   ProjectCard
 }
 from '../../ui/cards/project-card/project-card';
+import { AnimatedLinesBackground } from '../../ui/backgrounds/animated-lines-background/animated-lines-background';
 import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-solution-section',
   standalone: true,
-  imports: [ProjectCard, ScrollRevealDirective],
+  imports: [AnimatedLinesBackground, ProjectCard, ScrollRevealDirective],
   templateUrl: './solution-section.html',
   styleUrl: './solution-section.css'
 })
