@@ -1,13 +1,14 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 
 import { HERO_CONTENT } from '../../../data/verifactu/hero.data';
+import { AnimatedLinesBackground } from '../../ui/backgrounds/animated-lines-background/animated-lines-background';
 import { HeroContentComponent } from '../../ui/hero/hero-content/hero-content';
 import { HeroImage } from '../../ui/hero/hero-image/hero-image';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [HeroContentComponent, HeroImage],
+  imports: [AnimatedLinesBackground, HeroContentComponent, HeroImage],
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.css'
 })

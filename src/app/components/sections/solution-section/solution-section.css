@@ -1,7 +1,20 @@
 .solution-section {
+  position: relative;
   padding: var(--section-padding-y) var(--section-padding-x);
   background: var(--color-bkg-black);
   color: var(--color-white);
+  overflow: hidden;
+}
+
+.solution-section app-animated-lines-background {
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+}
+
+.solution-section__header,
+.solution-section__layout {
+  position: relative;
+  z-index: 1;
 }
 
 .solution-section__header {
@@ -13,7 +26,7 @@
   margin: 0;
   color: var(--color-white);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-black);
+  font-weight: var(--text-h2-font-weight);
   line-height: 0.9;
 }
 
