@@ -25,17 +25,6 @@ export class ProjectCardsCarousel {
   private dragStartX = 0;
   private scrollStart = 0;
 
-  private scroll(amount: number): void {
-
-    if (!this.viewport) {
-      return;
-    }
-
-    this.viewport.nativeElement.scrollBy({
-      left: amount,
-      behavior: 'smooth'
-    });
-  }
 
   prev(): void {
     this.scroll(-1);
